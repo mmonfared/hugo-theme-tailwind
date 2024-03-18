@@ -15,8 +15,13 @@
       {{- $isCurrent := or ($page.IsMenuCurrent .Menu .) ($page.HasMenuCurrent .Menu .) (and $page.IsHome (and .Page (eq $contentTypeName .Page.Type))) -}}
       {{ if not .HasChildren }}
         <li id="{{ .Identifier }}" class="">
-          <a class="block px-3 py-3 hover:text-emerald-600 {{- if $isCurrent }} text-emerald-600{{ end -}}"
-            href="{{ .URL }}" title="{{ .Name }}">{{ .Name }}</a>
+          {{ if eq .Identifier "about" }}
+            <a class="block px-3 py-3 hover:text-emerald-600 {{- if $isCurrent }} text-emerald-600{{ end -}}"
+               href="https://monfared.io" target="_blank" title="{{ .Name }}">{{ .Name }}</a>
+          {{ else }}
+            <a class="block px-3 py-3 hover:text-emerald-600 {{- if $isCurrent }} text-emerald-600{{ end -}}"
+               href="{{ .URL }}" title="{{ .Name }}">{{ .Name }}</a>
+          {{ end }}
         </li>
       {{ end }}
     {{ end }}
