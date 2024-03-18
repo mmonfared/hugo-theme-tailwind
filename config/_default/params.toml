@@ -1,6 +1,6 @@
 # SEO keywords and description for your site.
-keywords = "hugo, tailwind, tailwindcss, hugo theme, hugo theme tailwind"
-subtitle = "Example site for hugo-theme-tailwind"
+keywords = "test, test automation, qa, qa automation, mohammad monfared, stlc, sdet, appium, selenium, cypress, software quality assurance"
+subtitle = "A Test Automation enthusiast"
 
 # dir name of your blog content (default is `content/posts`).
 # the list of set content will show up on your index page (baseurl).
